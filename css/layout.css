@@ -264,28 +264,49 @@ ul#nav li.current a { color: #F06000; }
   font-family: 'opensans', sans-serif;
   align-items: center; /* Vertically center-align image and text */
   justify-content: flex-start; /* Align the text and image closer to the left */
-  gap: 2rem; /* Maintain space between image and text */
+  gap: 3rem; /* Maintain space between image and text */
   max-width: 1200px; /* Constrain the container width */
   margin: 0 auto; /* Center align the content horizontally */
+  padding: 3rem 3.5rem; /* Add padding for card effect */
+  background: rgba(255, 255, 255, 0.02); /* Subtle background */
+  border-radius: 12px; /* Rounded corners */
+  border: 1px solid rgba(240, 96, 0, 0.15); /* Subtle orange border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.intro-info:hover {
+  background: rgba(255, 255, 255, 0.04); /* Slightly lighter on hover */
+  border-color: rgba(240, 96, 0, 0.25); /* More visible border on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 .intro-info img {
-  border: 2px solid #F06000; /* Orange border for emphasis */
-  margin: 0.5rem 2rem 0 0; /* Adjust margins for balance */
-  height: 150px; /* Image size */
-  width: 150px;
+  border: 3px solid #F06000; /* Orange border for emphasis */
+  margin: 0; /* Clean margins */
+  height: 160px; /* Slightly larger image */
+  width: 160px;
   border-radius: 50%; /* Circular image */
   flex-shrink: 0; /* Prevent image from shrinking */
+  box-shadow: 0 0 20px rgba(240, 96, 0, 0.3), 0 0 40px rgba(240, 96, 0, 0.1); /* Orange glow */
+  transition: all 0.3s ease;
+}
+
+.intro-info img:hover {
+  box-shadow: 0 0 30px rgba(240, 96, 0, 0.5), 0 0 60px rgba(240, 96, 0, 0.2); /* Enhanced glow on hover */
+  transform: scale(1.02); /* Subtle zoom */
 }
 
 .intro-info .lead {
   font-family: 'opensans', sans-serif;
-  font-size: 1.5rem; /* Adjust text size for readability */
-  line-height: 1.8; /* Increase line spacing for better readability */
-  color: #dcd8d8; /* Light gray color for text */
+  font-size: 1.6rem; /* Slightly larger text */
+  line-height: 1.9; /* Better line spacing */
+  color: #e8e8e8; /* Brighter text for better readability */
   text-align: left; /* Align text to the left */
-  padding-left: 2rem; /* Adjust padding for better spacing */
+  padding-left: 0; /* Remove extra padding */
   margin: 0; /* Remove unnecessary margins */
+  font-weight: 300; /* Lighter weight for elegance */
 }
 
 #about {
@@ -296,10 +317,25 @@ ul#nav li.current a { color: #F06000; }
 
 .section-intro h5 {
   font-family: 'opensans-bold', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #F06000; /* Keep orange color */
-  letter-spacing: 0.15rem; /* Subtle spacing for heading */
-  margin-bottom: 1rem; /* Spacing below subtitle */
+  letter-spacing: 0.2rem; /* Spacing for heading */
+  margin-bottom: 2.5rem; /* More spacing below heading */
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.section-intro h5::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #F06000, transparent);
+  border-radius: 2px;
 }
 
 
