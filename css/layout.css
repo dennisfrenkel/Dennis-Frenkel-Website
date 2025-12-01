@@ -339,6 +339,48 @@ ul#nav li.current a { color: #F06000; }
 }
 
 
+/* Profile and Skills Boxes */
+.profile-box, .skills-box {
+  padding: 2.5rem;
+  border: 2px dashed rgba(240, 96, 0, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-box:hover, .skills-box:hover {
+  border-color: rgba(240, 96, 0, 0.5);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(240, 96, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profile-box h3, .skills-box h3 {
+  color: #F06000;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.profile-box h3::after, .skills-box h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #F06000;
+}
+
+.profile-box p, .skills-box p {
+  color: #c8c8c8;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
 .about-content {
   position: relative;
   text-align: left;
